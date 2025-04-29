@@ -1,9 +1,14 @@
 # um_get_members
 **extracting member information from websites without permission** 
-
 # Ultimate Member Data Scraper
 
 This tool is a Python script designed to extract and analyze member information from websites using the Ultimate Member WordPress plugin. The script collects member data from web pages, saves it in JSON format, and converts it to Contact Form 7 SWV Schema format.
+
+## Demo
+
+![Ultimate Member Directory Screenshot](https://github.com/um_get_members/members_page_initial.png)
+
+*Screenshot of Ultimate Member directory page captured during data extraction*
 
 ## Features
 
@@ -52,7 +57,7 @@ pip install -r requirements.txt
 Or install packages directly:
 
 ```bash
-pip install requests beautifulsoup4 selenium webdriver-manager
+pip install requests beautifulsoup4 selenium webdriver-manager lxml
 ```
 
 ## Usage
@@ -108,6 +113,42 @@ params['nonce'] = "your_nonce_value"
    - Try to get additional member data through AJAX requests
 4. **Data Processing**: Process the extracted member data and remove duplicates.
 5. **Data Storage**: Save results as JSON files and convert to SWV Schema format if needed.
+
+## Output Example
+
+The script generates two output files:
+
+1. `members_data.json` - Contains the raw member data:
+
+```json
+[
+  {
+    "id": "user123",
+    "name": "John Doe",
+    "profile_url": "https://example.com/user/john-doe/",
+    "role": "Member",
+    "email": "john@example.com"
+  },
+  ...
+]
+```
+
+2. `members_schema.json` - Contains the Contact Form 7 SWV Schema format:
+
+```json
+{
+  "version": "Contact Form 7 SWV Schema 2024-10",
+  "locale": "en_US",
+  "rules": [
+    {
+      "rule": "required",
+      "field": "member-user123-name",
+      "error": "Please fill in the name field."
+    },
+    ...
+  ]
+}
+```
 
 ## Troubleshooting
 
