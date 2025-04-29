@@ -1,5 +1,5 @@
 # um_get_members
-** extracting member information from websites without permission ** 
+**extracting member information from websites without permission** 
 
 # Ultimate Member Data Scraper
 
