@@ -6,8 +6,7 @@ This tool is a Python script designed to extract and analyze member information 
 
 ## Demo
 
-![Ultimate Member Directory Screenshot](https://github.com/um_get_members/members_page_initial.png)
-
+![Ultimate Member Directory Screenshot](https://raw.githubusercontent.com/JO-HEEJIN/um_get_members/main/members_page_initial.png)
 *Screenshot of Ultimate Member directory page captured during data extraction*
 
 ## Features
